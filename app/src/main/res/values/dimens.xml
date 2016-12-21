@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="card_radius">4dp</dimen>
+
+    <dimen name="width_63_dp">63dp</dimen>
+    <dimen name="height_31_dp">31dp</dimen>
+    <dimen name="margin_left_24dp">24dp</dimen>
+    <dimen name="find_bus_21sp">21sp</dimen>
+    <dimen name="margin_top_25dp">26dp</dimen>
+    <dimen name="image_dp_60">60dp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="dp_72">72dp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ViewDictProject</string>
+    <string name="find_bus_state">找车位</string>
+    <string name="find_more">查看更多</string>
+    <string name="apus_help_find">找车位，APUS帮您查找附近车位</string>
+    <string name="news">新闻</string>
+    <string name="more">更多</string>
+    <string name="new_title">Do you like kenting?</string>
+</resources>

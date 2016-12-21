@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.apusapps.launcher.widget.NormalAlphaDigitalClock
+        android:id="@+id/digital_parent"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/digital_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:textSize = "15sp"
+            android:singleLine="true" />
+    </com.apusapps.launcher.widget.NormalAlphaDigitalClock>
+
+    <ImageView
+        android:id="@+id/dot"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right|top"/>
+
+</merge>
