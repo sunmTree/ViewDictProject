@@ -1,40 +1,47 @@
 package com.sunm.vd;
 
-import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
+import com.sunm.vpandgrid.AdPageAdapter;
 
-    private Button start;
+import java.util.ArrayList;
+import java.util.List;
+
+public class SecondActivity extends AppCompatActivity {
+
     private static final String INTENT_KEY = "secondActivity";
+    private LinearLayout pageParent;
+    private ViewPager page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        start = (Button) findViewById(R.id.btn_intent);
-        start.setOnClickListener(this);
-
-        String stringExtra = getIntent().getStringExtra(INTENT_KEY);
-        if (stringExtra != null){
-            start.setText(stringExtra);
-        }
+        initView();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_intent:
-                Intent intent = new Intent(SecondActivity.this, SecondActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT
-                        | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
-                intent.putExtra(INTENT_KEY,"second");
-                startActivity(intent);
-                break;
+    private void initView() {
+        pageParent = (LinearLayout) findViewById(R.id.page_parent);
+        page = (ViewPager) findViewById(R.id.page);
+
+        List<View> pageChildViews = new ArrayList<>();
+        for (int i=0; i< 4; i++){
+            TextView textView = new TextView(this);
+            textView.setText("No."+i);
+            textView.setTextSize(20);
+            textView.setGravity(Gravity.CENTER);
+            textView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+            pageChildViews.add(textView);
         }
+
+        page.setAdapter(new AdPageAdapter(pageChildViews));
     }
+
 }

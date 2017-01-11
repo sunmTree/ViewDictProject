@@ -10,4 +10,5 @@
     <color name="apus_green">#009688</color>
     <color name="half_gray">#88444444</color>
     <color name="apus_gray">#444444</color>
+    <color name="alpha_blue">#434fff</color>
 </resources>
